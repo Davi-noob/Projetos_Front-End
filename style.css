@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+.header {
+  background: #006f3c;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  height: 2rem;
+}
+
+.user-controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.user-controls button img {
+  height: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+.user-controls .user img {
+  margin-right: 0;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.summary {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.saldo h2 {
+  font-size: 1rem;
+  color: #666;
+}
+
+.saldo p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.totais div {
+  display: flex;
+  align-items: center;
+}
+
+.totais img {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Publicidade */
+.ad img {
+  width: 100%;
+  border-radius: 0.5rem;
+  grid-column: span 2;
+}
+
+/* Transações */
+.transactions {
+  grid-column: span 2;
+}
+
+.transactions h3 {
+  margin-bottom: 0.5rem;
+}
+
+#tx-list {
+  list-style: none;
+}
+
+#tx-list li {
+  background: #fff;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+#tx-list li.empty {
+  text-align: center;
+  color: #777;
+}
+
+/* Modal PIX */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab.active {
+  border-bottom: 3px solid #006f3c;
+  font-weight: bold;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.error-msg {
+  color: #d00;
+  font-size: 0.9rem;
+  display: none;
+  margin-bottom: 0.5rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

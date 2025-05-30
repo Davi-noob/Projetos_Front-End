@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conta Digital – Bank SE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="assets/img_logo.png" alt="Bank SE Logo" class="logo" />
+    <div class="user-controls">
+      <button id="btn-pagar"><img src="assets/icon _enviar_.png" alt="Pagar" /> Pagar</button>
+      <button id="btn-investir"><img src="assets/icon _graph_.png" alt="Investir" /> Investir</button>
+      <button id="btn-pix"><img src="assets/icon_pix_.png" alt="PIX" /> Área PIX</button>
+      <button class="user"><img src="assets/icon_user_.png" alt="Usuário" /></button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="summary">
+      <div class="saldo">
+        <h2>Saldo disponível</h2>
+        <p id="saldo">R$ 0,00</p>
+      </div>
+      <div class="totais">
+        <div><img src="assets\_icon _receber_.png" alt="Entradas" /><span>Entradas: <strong id="total-entradas">R$ 0,00</strong></span></div>
+        <div><img src="assets/icon _dollar_.png" alt="Saídas" /><span>Saídas: <strong id="total-saidas">R$ 0,00</strong></span></div>
+      </div>
+    </section>
+
+    <section class="ad">
+      <img src="assets/img_seguros.png" alt="Seguros para família" />
+    </section>
+
+    <section class="transactions">
+      <h3>Transações</h3>
+      <ul id="tx-list">
+        <li class="empty">Não constam transações</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="pix-modal" class="modal hidden">
+    <div class="modal-content">
+      <nav class="tabs">
+        <button data-target="receber" class="tab active">Receber</button>
+        <button data-target="transferir" class="tab">Transferir</button>
+      </nav>
+      <form id="form-receber" class="form active">
+        <label>
+          CNPJ/CPF:
+          <input type="text" id="cpf-receber" required />
+        </label>
+        <label>
+          Valor:
+          <input type="number" id="valor-receber" step="0.01" required />
+        </label>
+        <p class="error-msg" id="error-receber">Todos os campos devem ser preenchidos!</p>
+        <button type="submit">Receber</button>
+      </form>
+      <form id="form-transferir" class="form">
+        <label>
+          Chave PIX:
+          <input type="text" id="chave-transferir" required />
+        </label>
+        <label>
+          Valor:
+          <input type="number" id="valor-transferir" step="0.01" required />
+        </label>
+        <p class="error-msg" id="error-transferir">Todos os campos devem ser preenchidos!</p>
+        <button type="submit">Transferir</button>
+      </form>
+      <button class="close-modal">&times;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
